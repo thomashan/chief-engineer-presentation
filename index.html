@@ -36,7 +36,6 @@
     <div class="slides">
         <section>
             <h1>Clean architecture in real life!</h1>
-            <h3>With examples</h3>
             <p>
                 <small>Created by <a href="mailto:than@odecee.com.au">Thomas Han</a></small>
             </p>
@@ -46,22 +45,40 @@
             <section>
                 <h2>Does everyone knows what architecture is?</h2>
                 <p class="fragment">An aspiring developer want to be an architect...</p>
-                <p class="fragment">Here's a conversation of the aspiring developer (A) with Uncle Bob (B)</p>
+                <p class="fragment"><a href="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Here's
+                    a conversation of the aspiring developer (A) with Uncle Bob (B)</a></p>
             </section>
             <section>
-                <p>A: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">I want to become a Software Architect.</q></p>
-                <p class="fragment">B: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">That’s a fine goal for a young software developer.</q></p>
-                <p class="fragment">A: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">I want to lead a team and make all the important decisions about databases and frameworks and web-servers and all that stuff.</q></p>
-                <p class="fragment">B: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Oh. Well, then you don’t want to become a Software Architect after all.</q></p>
-                <p class="fragment">A: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Of course I do! I want to be the one who makes all the important decisions.</q></p>
+                <p>A: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">I want to
+                    become a Software Architect.</q></p>
+                <p class="fragment">B: <q
+                        cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">That’s a fine
+                    goal for a young software developer.</q></p>
+                <p class="fragment">A: <q
+                        cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">I want to lead a
+                    team and make all the important decisions about databases and frameworks and web-servers and all
+                    that stuff.</q></p>
+                <p class="fragment">B: <q
+                        cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Oh. Well, then
+                    you don’t want to become a Software Architect after all.</q></p>
+                <p class="fragment">A: <q
+                        cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Of course I do!
+                    I want to be the one who makes all the important decisions.</q></p>
             </section>
             <section>
-                <p>B: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">That’s fine, but you didn’t list the important decisions. You listed the irrelevant ones.</q></p>
-                <p class="fragment">A: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">What do you mean? The Database isn’t an important decision? Do you know how much money we spend on them?</q></p>
-                <p class="fragment">B: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Too much probably. And, no; the database is not one of the most important decisions. ... The database is merely an IO device. It happens to provide some useful tools for sorting, querying, and reporting but those are ancillary to the system architecture.</q></p>
+                <p>B: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">That’s fine,
+                    but you didn’t list the important decisions. You listed the irrelevant ones.</q></p>
+                <p class="fragment">A: <q
+                        cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">What do you
+                    mean? The Database isn’t an important decision? Do you know how much money we spend on them?</q></p>
+                <p class="fragment">B: <q
+                        cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Too much
+                    probably. And, no; the database is not one of the most important decisions. ... The database is
+                    merely an IO device. It happens to provide some useful tools for sorting, querying, and reporting
+                    but those are ancillary to the system architecture.</q></p>
             </section>
             <section>
-                <h3>How can a database not be important to the architecture?!</h3>
+                <h3>How can databases not be important to the architecture?!</h3>
             </section>
         </section>
         <section>
@@ -74,29 +91,99 @@
                     <li>web servers</li>
                     <li>delivery mechanism (e.g. web, mobile, desktop)</li>
                 </ul>
-                <p class="fragment">because the business rules do not depend upon the tools of the database, nor the framework, nor the web servers, nor how it's delivered.</p>
+                <p class="fragment">because the business rules do not depend upon the tools of the database, nor the
+                    framework, nor the web servers, nor how it's delivered.</p>
             </section>
             <section>
                 <h3>You're talking gibberish.</h3>
                 <p class="fragment">Am I?</p>
                 <p class="fragment">On the contrary, it's the fundamentals of software architecture!</p>
-                <p class="fragment">I didn't say don't use those tools. I said business rules shouldn’t depend upon them.</p>
+                <p class="fragment">I didn't say don't use those tools. I said business rules shouldn’t depend upon
+                    them.</p>
                 <p class="fragment">Business rules (highest level policies) shouldn't depend upon low level tools.</p>
-                <p class="fragment">This is called the Dependency Inversion Principle or the Inversion of control principal.</p>
+                <p class="fragment">This is called the Dependency Inversion Principle or the Inversion of control
+                    principal.</p>
             </section>
             <section>
                 <h2>Architecture misconceptions everywhere!</h2>
-                <p>Enterprises spend millions of dollars and months to years of work to upgrade a database.</p>
+                <p>Enterprises spend millions of dollars and months/years to upgrade a database.</p>
                 <p class="fragment">And what business value did the upgrade bring?</p>
-                <p class="fragment">I'm not saying don't upgrade the database, I'm asking whether millions of dollars and thousands of man hours is warranted to upgrade a database system.</p>
+                <p class="fragment">I'm not saying don't upgrade the database, I'm asking whether millions of dollars
+                    and thousands of man hours is warranted to upgrade a database system.</p>
+            </section>
+            <section>
+                <h2>Architecture misconceptions everywhere!</h2>
+                <h3>What if...</h3>
                 <p class="fragment">What if they abstracted away the tools into the business rules...</p>
-                <p class="fragment">All they had to do was to test the concrete implementation of the business rules using the database</p>
+                <p class="fragment">All they had to do was to test the concrete implementation of the business rules
+                    using the database</p>
             </section>
         </section>
         <section>
             <section>
-                <h2>So what should we be doing?</h2>
+                <h2>Here's clean architecture</h2>
+                <small><a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">From 8th
+                    Light</a></small>
+                <br>
+                <img height="350" data-src="images/the_clean_architecture.jpeg" alt="Clean architecture diagram">
+                <p class="fragment">Notice how tools and delivery mechanisms are placed on the outer circle</p>
             </section>
+            <section>
+                <h2>Here's clean architecture</h2>
+                <small><a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">From 8th
+                    Light</a></small>
+                <br>
+                <img height="350" data-src="images/the_clean_architecture.jpeg" alt="Clean architecture diagram">
+                <p class="fragment">Inner circles are high level policies.</p>
+                <p class="fragment">Outer circles are low level tools.</p>
+            </section>
+        </section>
+        <section>
+            <h2>What is clean architecture?</h2>
+            <p class="fragment">To me it's about: </p>
+            <ul>
+                <li class="fragment">ability to decide on the outer circles later.</li>
+                <li class="fragment">testability - run use case without any framework (frameworks are tools as well!)
+                </li>
+                <ul class="fragment">
+                    <li><a href="http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">Integrated
+                        tests are a scam</a></li>
+                </ul>
+                <li class="fragment">rapid feedback between dev/test cycle</li>
+                <li class="fragment">domain model should scream about what the application does</li>
+                <li class="fragment">being able to deploy mircoservices independently of each other</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+            <h2>How?</h2>
+            <p class="fragment">Be bold for change. Lots of courage!</p>
+            <p class="fragment">Many clients think they know what architecture is.</p>
+            <ul class="fragment">
+                <li>This is hard to change because
+                    <ul>
+                        <li>we have to change the mindsets of many architects</li>
+                        <li>shifts in both mindsets and technology stack is required</li>
+                        <li>many clients focus on the irrelevant things (e.g. database, delivery mechanism)</li>
+                    </ul>
+            </ul>
+            </section>
+            <section>
+                <h2>How do we get there?</h2>
+                <p class="fragment">Most importantly, </p>
+                <p class="fragment">do the right think, and be brutally honest about it</p>
+                <p class="fragment">make sure we're building the right thing before we building it right</p>
+                <p class="fragment">engineers should be protected from all the bureaucracy and politics to have these honest discussions</p>
+            </section>
+        </section>
+        <section>
+            <h2>Thank you!</h2>
+            <h2>&nbsp;</h2>
+            <h2>&nbsp;</h2>
+            <h2>&nbsp;</h2>
+        </section>
+        <section>
+            <h2>Q&A</h2>
         </section>
     </div>
 </div>
