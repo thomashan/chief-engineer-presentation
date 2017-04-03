@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Clean architecture in real life!</title>
+    <title>Clean architecture in real life</title>
 
     <meta name="description" content="Chief engineer presentation on clean architecture in real life.">
     <meta name="author" content="Thomas Han">
@@ -35,7 +35,7 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <h1>Clean architecture in real life!</h1>
+            <h1>Clean architecture in real life</h1>
             <p>
                 <small>Created by <a href="mailto:than@odecee.com.au">Thomas Han</a></small>
             </p>
@@ -46,7 +46,10 @@
                 <h2>Does everyone knows what architecture is?</h2>
                 <p class="fragment">An aspiring developer want to be an architect...</p>
                 <p class="fragment"><a href="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">Here's
-                    a conversation of the aspiring developer (A) with Uncle Bob (B)</a></p>
+                    a conversation of the aspiring developer (A) with Uncle Bob (B)</a>
+                    <small>http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html</small>
+                </p>
+
             </section>
             <section>
                 <p>A: <q cite="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html">I want to
@@ -88,11 +91,11 @@
                 <ul>
                     <li>database</li>
                     <li>framework</li>
-                    <li>web servers</li>
+                    <li>web server</li>
                     <li>delivery mechanism (e.g. web, mobile, desktop)</li>
                 </ul>
                 <p class="fragment">because the business rules do not depend upon the tools of the database, nor the
-                    framework, nor the web servers, nor how it's delivered.</p>
+                    framework, nor the web server, nor how it's delivered.</p>
             </section>
             <section>
                 <h3>You're talking gibberish.</h3>
@@ -101,7 +104,7 @@
                 <p class="fragment">I didn't say don't use those tools. I said business rules shouldn’t depend upon
                     them.</p>
                 <p class="fragment">Business rules (highest level policies) shouldn't depend upon low level tools.</p>
-                <p class="fragment">This is called the Dependency Inversion Principle or the Inversion of control
+                <p class="fragment">This is called the Dependency Inversion Principle or the Inversion of Control
                     principal.</p>
             </section>
             <section>
@@ -115,8 +118,8 @@
                 <h2>Architecture misconceptions everywhere!</h2>
                 <h3>What if...</h3>
                 <p class="fragment">What if they abstracted away the tools into the business rules...</p>
-                <p class="fragment">All they had to do was to test the concrete implementation of the business rules
-                    using the database</p>
+                <p class="fragment">All they had to do was to test the implementations of the business rules
+                    that used the database</p>
             </section>
         </section>
         <section>
@@ -143,15 +146,15 @@
             <p class="fragment">To me it's about: </p>
             <ul>
                 <li class="fragment">ability to decide on the outer circles later.</li>
-                <li class="fragment">testability - run use case without any framework (frameworks are tools as well!)
+                <li class="fragment">testability - run use cases without any framework (frameworks are tools as well!)
                 </li>
                 <ul class="fragment">
                     <li><a href="http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">Integrated
                         tests are a scam</a></li>
                 </ul>
-                <li class="fragment">rapid feedback between dev/test cycle</li>
+                <li class="fragment">rapid feedback between dev/test cycles</li>
                 <li class="fragment">domain model should scream about what the application does</li>
-                <li class="fragment">being able to deploy mircoservices independently of each other</li>
+                <li class="fragment">avoiding stored procedures in the database</li>
             </ul>
         </section>
         <section>
@@ -171,9 +174,11 @@
             <section>
                 <h2>How do we get there?</h2>
                 <p class="fragment">Most importantly, </p>
-                <p class="fragment">do the right think, and be brutally honest about it</p>
-                <p class="fragment">make sure we're building the right thing before we building it right</p>
-                <p class="fragment">engineers should be protected from all the bureaucracy and politics to have these honest discussions</p>
+                <ul>
+                    <li class="fragment">do the right think, and be brutally honest about it</li>
+                    <li class="fragment">make sure we're building the right thing before we build it right</li>
+                    <li class="fragment">engineers should be removed from all the politics and bureaucracy to have these honest discussions</li>
+                </ul>
             </section>
         </section>
         <section>
